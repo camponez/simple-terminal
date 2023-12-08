@@ -367,6 +367,7 @@ mousesel(XEvent *e, int done)
 void
 mousereport(XEvent *e)
 {
+    int btn, code;
     int len, x = evcol(e), y = evrow(e),
         button = e->xbutton.button, state = e->xbutton.state;
     char buf[40];
