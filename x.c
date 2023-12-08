@@ -835,7 +835,7 @@ xsetcolorname(int x, const char *name)
 {
     Color ncolor;
 
-    if (!BETWEEN(x, 0, dc.collen))
+    if (!BETWEEN(x, 0, dc.collen - 1))
         return 1;
 
     if (!xloadcolor(x, name, &ncolor))
